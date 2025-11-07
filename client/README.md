@@ -33,8 +33,10 @@ It allows an **Admin** to manage blog posts (create, edit, delete, publish), whi
 
 ### 🖥️ 1. Clone the project
 ```bash
-git clone https://github.com/yourusername/mern-blog-cms.git
+git clone https://github.com/Khushi430985/Mern-blog-cms.git
 cd mern-blog-cms
+
+---
 
 📦 2. Install dependencies
 Backend setup
