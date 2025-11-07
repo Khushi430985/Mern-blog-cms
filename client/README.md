@@ -39,16 +39,19 @@ cd mern-blog-cms
 
 
 ### 📦 2. Install dependencies
-Backend setup
-cd server
+### Backend setup
+```bash cd server
 npm install
+```
 
-Frontend setup
-cd ../client
+### Frontend setup
+```cd ../client
 npm install
+```
 
 ### 🔧 3. Configure environment variables
 Create a .env file inside the server/ folder and add:
+
 PORT=5000
 MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_secret_key
