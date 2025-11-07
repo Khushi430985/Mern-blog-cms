@@ -4,6 +4,14 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import mongoose from "mongoose";
+import authRoutes from "./routes/auth.routes.js";
+import postRoutes from "./routes/post.routes.js";
+
+app.use("/api/auth", authRoutes);
+app.use("/api/auth", authRoutes);
+app.use("/api/posts", postRoutes);
+
+
 
 dotenv.config();
 
