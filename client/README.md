@@ -40,32 +40,39 @@ cd mern-blog-cms
 
 ### 📦 2. Install dependencies
 ### Backend setup
-```bash cd server
+```
+bash cd server
 npm install
 ```
 
 ### Frontend setup
-```cd ../client
+```
+cd ../client
 npm install
 ```
 
 ### 🔧 3. Configure environment variables
 Create a .env file inside the server/ folder and add:
-
+```
 PORT=5000
 MONGO_URI=your_mongodb_atlas_connection_string
 JWT_SECRET=your_secret_key
 ALLOW_SIGNUP=false
+```
 
 
 ### ▶️ 4. Start the project
-Run backend
+### Run backend
+```
 cd server
 npm run dev
+```
 
-Run frontend
+### Run frontend
+```
 cd ../client
 npm run dev
+```
 
 Now open your browser and go to 👉 http://localhost:5173
 
@@ -76,4 +83,5 @@ Khushi Sharma
 
 
 ### Summary
+
 A clean and minimal MERN Blog CMS that demonstrates CRUD operations, JWT authentication, and public/private routing — perfect for learning or showcasing MERN stack skills.
