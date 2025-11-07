@@ -1,16 +1,76 @@
-# React + Vite
+# 📰 MERN Blog CMS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight **Content Management System (Blog App)** built using the **MERN stack** (MongoDB, Express, React, Node.js).  
+It allows an **Admin** to manage blog posts (create, edit, delete, publish), while **public users** can view only the published blogs.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
 
-## React Compiler
+- 🔐 **Admin Authentication** (JWT + Cookies)  
+- 📝 **Create, Edit, Delete Posts**  
+- 🌓 **Draft & Publish System**  
+- 🌍 **Public Blog Pages** – read-only view for all visitors  
+- ☁️ **MongoDB Atlas** for cloud database  
+- 🎨 **Bootstrap 5 Styling** – simple & responsive UI  
+- ⚙️ **Secure Environment Variables** (not pushed to GitHub)  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🏗️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Layer | Technology |
+|-------|-------------|
+| **Frontend** | React (Vite) + Bootstrap 5 |
+| **Backend** | Node.js + Express.js |
+| **Database** | MongoDB Atlas |
+| **Authentication** | JWT + Cookies |
+| **Version Control** | Git + GitHub |
+
+---
+
+## ⚡ Getting Started (Run Locally)
+
+### 🖥️ 1. Clone the project
+```bash
+git clone https://github.com/yourusername/mern-blog-cms.git
+cd mern-blog-cms
+
+📦 2. Install dependencies
+Backend setup
+cd server
+npm install
+
+Frontend setup
+cd ../client
+npm install
+
+🔧 3. Configure environment variables
+Create a .env file inside the server/ folder and add:
+
+
+PORT=5000
+MONGO_URI=your_mongodb_atlas_connection_string
+JWT_SECRET=your_secret_key
+ALLOW_SIGNUP=false
+
+
+▶️ 4. Start the project
+Run backend
+cd server
+npm run dev
+
+Run frontend
+cd ../client
+npm run dev
+
+Now open your browser and go to 👉 http://localhost:5173
+
+
+
+👩‍💻 Author
+Khushi Sharma
+
+
+Summary
+A clean and minimal MERN Blog CMS that demonstrates CRUD operations, JWT authentication, and public/private routing — perfect for learning or showcasing MERN stack skills.
