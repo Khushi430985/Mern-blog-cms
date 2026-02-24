@@ -5,15 +5,20 @@ import {
   getPost,
   updatePost,
   deletePost,
+  getAllPostsAdmin,
 } from "../controllers/post.controller.js";
-import { requireAuth } from "../middleware/auth.middleware.js";
+import { requireAuth, requireAdmin } from "../middleware/auth.middleware.js";
 
 const router = Router();
 
-router.post("/", requireAuth, createPost);     // create
-router.get("/", getPosts);                     // list all
-router.get("/:id", getPost);                   // single post
-router.put("/:id", requireAuth, updatePost);   // update
-router.delete("/:id", requireAuth, deletePost);// delete
+// PUBLIC (published only)
+router.get("/", getPosts);
+router.get("/:id", getPost);
+
+// ADMIN (all + write)
+router.get("/admin/all", requireAuth, requireAdmin, getAllPostsAdmin);
+router.post("/", requireAuth, requireAdmin, createPost);
+router.put("/:id", requireAuth, requireAdmin, updatePost);
+router.delete("/:id", requireAuth, requireAdmin, deletePost);
 
 export default router;
