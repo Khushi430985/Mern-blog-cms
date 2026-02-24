@@ -1,4 +1,4 @@
-const BASE_URL = "http://localhost:5000";
+const BASE_URL = "https://mern-blog-cms.onrender.com";
 
 export async function request(path, { method = "GET", body, headers = {} } = {}) {
   const res = await fetch(`${BASE_URL}${path}`, {
