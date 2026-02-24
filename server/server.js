@@ -16,7 +16,13 @@ import postRoutes from "./routes/post.routes.js"; // if you added posts
 const app = express();
 
 // --- middlewares ---
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://mern-blog-cms-seven.vercel.app"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 app.use(cookieParser());
 app.use(morgan("dev"));
